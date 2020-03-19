@@ -40,7 +40,29 @@ const routes = [{
             {
                 path: 'search',
                 component: Search
+            },
+            {
+                path: 'detail/1/:moviesId',
+                components: {
+                    default: NowPlaying,
+                    detail: () =>
+                        import ('../components/detail')
+                },
+                props: {
+                    detail: true
+                }
             }, {
+                path: 'detail/2/:moviesId',
+                components: {
+                    default: CommingSoon,
+                    detail: () =>
+                        import ('../components/detail')
+                },
+                props: {
+                    detail: true
+                }
+            },
+            {
                 path: '/*',
                 redirect: "/movies/nowplaying"
             }

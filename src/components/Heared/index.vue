@@ -1,24 +1,24 @@
 <template>
   <div>
     <header id="header">
-    <h1>{{title}}</h1>
+      <slot></slot>
+      <h1>{{title}}</h1>
     </header>
   </div>
 </template>
 
 <script>
 export default {
-  props:{
-    title:{
-      type:String,
-      default:'喵喵电影'
+  props: {
+    title: {
+      type: String,
+      default: "喵喵电影"
     }
   }
 };
 </script>
 
 <style scoped>
-
 #header {
   width: 100%;
   height: 50px;
